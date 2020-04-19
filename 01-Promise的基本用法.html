@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    new Promise((resolve, reject)=> {
+      setTimeout(()=> {
+        // resolve('Hello,world');
+        reject('error message')
+      }, 1000)
+    }).then((data)=> {
+      console.log(data);
+      console.log(data);
+      console.log(data)
+    }).catch((err)=> {
+      console.log(err)
+    })
+  </script>
+</body>
+</html>

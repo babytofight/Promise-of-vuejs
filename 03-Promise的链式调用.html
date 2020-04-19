@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    new Promise((resolve, reject)=> {
+      setTimeout(()=> {
+        resolve('Hello, world')
+      }, 1000)
+    }).then(res=> {
+      console.log(res, '第一行执行代码');
+      return res+ '11'
+    }).then(
+      res=> {
+        console.log(res)
+        return Promise.reject('error message')
+      }
+    ).catch(err=> {
+      console.log(err)
+    })
+  </script>
+</body>
+</html>
